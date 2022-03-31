@@ -1,3 +1,5 @@
 # PAWInternationalResort
-##Trabajo Practico N1
-Maquetado HTML del proyecto de sitio web para hotel PWA International Resort
+
+
+## Figma
+[Link](https://www.figma.com/file/X6tw8gU3n18jc7EDeKUsQ9/PaW?node-id=212:3) del figma
