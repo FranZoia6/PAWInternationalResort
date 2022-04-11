@@ -1,0 +1,39 @@
+/* Comienzo de la barra de navegacion */
+nav{
+   
+    text-align: right;
+}
+nav ul {
+    border: 1px solid #8a8a8d ;  
+}
+nav a {
+    text-decoration: none;
+    color: #003b70;
+    display: block;
+    padding: 10px;
+}
+nav a:hover{
+    background-color: #8a8a8d;
+}
+
+ nav li {
+    display: inline-block;
+    
+}
+form input  {
+    display: inline;
+}
+form label {
+    display: inline;
+}
+
+input {
+    background-color: #8a8a8d;
+    color:white;
+}
+
+label input {
+    background-color: #003b70;
+}
+
+/* Fin de la barra de navegacion */
