@@ -1,17 +1,48 @@
+/*Comienzo imagen header*/
+
+header {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+header figure{
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+   
+}
+
+header img {
+    margin: auto;
+    width: 100%;
+
+}
+/*Fin imagen header*/
+
+
 /* Comienzo de la barra de navegacion */
+
 nav{
    
     text-align: right;
+    margin-left: 200px;
+    margin-right: 200px;
+
 }
+
 nav ul {
-    border: 1px solid #8a8a8d ;  
+    margin: auto; 
+    border: 1px solid #8a8a8d ; 
 }
+
 nav a {
     text-decoration: none;
     color: #003b70;
     display: block;
     padding: 10px;
 }
+
 nav a:hover{
     background-color: #8a8a8d;
 }
@@ -20,9 +51,11 @@ nav a:hover{
     display: inline-block;
     
 }
+
 form input  {
     display: inline;
 }
+
 form label {
     display: inline;
 }
@@ -37,3 +70,41 @@ label input {
 }
 
 /* Fin de la barra de navegacion */
+
+/* Comienzo formulario de reserva index*/ 
+
+nav ~  section {
+    margin-left: 200px;
+    margin-right: 200px;
+    border: 1px solid #8a8a8d ; 
+}
+
+form{
+
+    display: inline-block;
+    width: 100%;
+
+
+}
+
+fieldset{
+    display: inline-block;
+    border: none;
+    width: 80%;
+    height: 100% ;
+}
+
+input{
+    width: 19%;
+    height: 100%;
+    padding: 1em 0px;
+}
+
+form label{
+    display: inline;
+}
+
+label input{
+    width: 20%;
+} 
+/* Fin furmularuo de reserva index*/
