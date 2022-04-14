@@ -1,4 +1,17 @@
 /*Comienzo imagen header*/
+@font-face {
+	font-family: 'intro';
+	src: url('../fonts/intro/Intro\ \ Regular.ttf')
+}
+
+@font-face {
+	font-family: 'intro';
+	src: url('../fonts/intro/Intro\ \ Regular.ttf')
+}
+
+body {
+	font-family: "intro";
+}
 
 header {
     margin-bottom: 0px;
@@ -73,7 +86,7 @@ label input {
 
 /* Comienzo formulario de reserva index*/ 
 
-nav ~  section {
+section {
     margin-left: 200px;
     margin-right: 200px;
     border: 1px solid #8a8a8d ; 
@@ -108,3 +121,10 @@ label input{
     width: 20%;
 } 
 /* Fin furmularuo de reserva index*/
+
+
+/* Clases custom */
+
+.is-flex {
+	display: flex;
+}
