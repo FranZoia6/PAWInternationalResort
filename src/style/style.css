@@ -1,17 +1,17 @@
-/*Comienzo imagen header*/
 @font-face {
-	font-family: 'intro';
-	src: url('../fonts/intro/Intro\ \ Regular.ttf')
+	font-family: 'intro-regular';
+	src: url('../fonts/intro-regular/Intro\ \ Regular.ttf')
 }
 
 @font-face {
-	font-family: 'intro';
-	src: url('../fonts/intro/Intro\ \ Regular.ttf')
+	font-family: 'intro-light';
+	src: url('../fonts/intro-light/Intro-Light.ttf')
 }
 
 body {
-	font-family: "intro";
+	/* font-family: "intro-regular"; */
 }
+/*Comienzo imagen header*/
 
 header {
     margin-bottom: 0px;
@@ -23,13 +23,11 @@ header figure{
     margin-right: 200px;
     margin-bottom: 0px;
     padding-bottom: 0px;
-   
 }
 
 header img {
     margin: auto;
     width: 100%;
-
 }
 /*Fin imagen header*/
 
@@ -37,7 +35,7 @@ header img {
 /* Comienzo de la barra de navegacion */
 
 nav{
-   
+   font-family: intro-light;
     text-align: right;
     margin-left: 200px;
     margin-right: 200px;
