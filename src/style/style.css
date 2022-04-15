@@ -1,28 +1,27 @@
-/*Comienzo imagen header*/
 @font-face {
 	font-family: 'intro';
 	src: url('../fonts/intro/Intro\ \ Regular.ttf')
 }
-
 @font-face {
-	font-family: 'intro';
-	src: url('../fonts/intro/Intro\ \ Regular.ttf')
+    font-family: 'intro-Light';
+    src: url('../fonts/Intro-Light/Intro-Light.ttf');
 }
 
 body {
 	font-family: "intro";
 }
 
+/*Comienzo imagen header*/
 header {
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 header figure{
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+    margin-left: 6em;
+    margin-right: 6em;
+    margin-bottom: 0;
+    padding-bottom: 0;
    
 }
 
@@ -39,21 +38,20 @@ header img {
 nav{
    
     text-align: right;
-    margin-left: 200px;
-    margin-right: 200px;
-
+    margin-left: 6rem;
+    margin-right: 6rem;
 }
 
 nav ul {
     margin: auto; 
-    border: 1px solid #8a8a8d ; 
+    border: 0.1em solid #8a8a8d ; 
 }
 
 nav a {
     text-decoration: none;
     color: #003b70;
     display: block;
-    padding: 10px;
+    padding: 1rem;
 }
 
 nav a:hover{
@@ -65,62 +63,53 @@ nav a:hover{
     
 }
 
-form input  {
-    display: inline;
-}
 
-form label {
-    display: inline;
-}
+/* Fin de la barra de navegacion */
+
+/* Comienzo formulario de reserva index*/ 
 
 input {
     background-color: #8a8a8d;
     color:white;
+    padding: 0;
+    margin: 0;
+    display: inline;
+
 }
 
 label input {
     background-color: #003b70;
 }
 
-/* Fin de la barra de navegacion */
-
-/* Comienzo formulario de reserva index*/ 
-
-section {
-    margin-left: 200px;
-    margin-right: 200px;
-    border: 1px solid #8a8a8d ; 
-}
-
-form{
-
-    display: inline-block;
-    width: 100%;
-
-
-}
-
 fieldset{
     display: inline-block;
     border: none;
-    width: 80%;
     height: 100% ;
-}
-
-input{
-    width: 19%;
-    height: 100%;
-    padding: 1em 0px;
+    padding: 0;
+    margin: 0;
 }
 
 form label{
     display: inline;
 }
 
-label input{
-    width: 20%;
-} 
+
+
 /* Fin furmularuo de reserva index*/
+
+/*Estilos generales*/
+section {
+    margin-left: 6rem;
+    margin-right: 6rem;
+    border: 0.1em solid #8a8a8d ; 
+}
+
+
+/*Estilos generales*/
+h1{
+    text-align: center;
+    font-size: 1.5rem;
+}
 
 
 /* Clases custom */
