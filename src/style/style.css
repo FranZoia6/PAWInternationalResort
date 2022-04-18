@@ -42,6 +42,9 @@ nav{
     text-align: right;
     margin-left: 6rem;
     margin-right: 6rem;
+    position: sticky; 
+    top: 0;
+    background-color: #fff;
 }
 
 nav ul {
@@ -69,6 +72,7 @@ nav a:hover{
 /* Fin de la barra de navegacion */
 
 /* Comienzo formulario de reserva index*/ 
+
 
 input {
     background-color: #8a8a8d;
@@ -143,4 +147,10 @@ figcaption{
 
 .is-flex {
 	display: flex;
+}
+
+.is-sticky{
+    position: sticky; 
+    top: 0;
+    background-color: #fff;
 }
