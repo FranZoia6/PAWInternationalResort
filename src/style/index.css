@@ -21,9 +21,10 @@
 
 	/* Tamaños de letras */
 	--nav-font-size: 18px;
-	--main-header-title-size: 25px;
-	--main-description-title-size: 22px;
-	--main-description-text-size: 17px;
+	--main-header-title-size: 5rem;
+	--main-description-title-size: 3.5rem;
+	--main-description-text-size: 1.5rem;
+	--footer-header-title-size: 1.5rem;
 }
 /* Fin de declaracion de variables */
 
@@ -70,6 +71,9 @@ body > header > figure > img {
 
 body > nav {
 	border-bottom: 1px solid var(--pantone-dark-blue);
+	position: sticky; 
+    top: 0;
+	background-color: #fff;
 }
 
 body > nav > ul {
@@ -128,12 +132,21 @@ body > section > form > label > input[name="comenzarReserva"] {
 
 /* Comienzo de main */
 
-body > main {
+/*body > main {
 	padding: 1em var(--external-padding-size) 1em var(--external-padding-size);
-}
+}*/
 
 body > main > section > header {
 	text-align: center;
+}
+
+
+body > main > section {
+	padding: 6rem 0;
+}
+
+body > main > section:nth-child(odd){
+	background-color: #8a8a8a;
 }
 
 body > main > section > header > h1 {
@@ -141,10 +154,10 @@ body > main > section > header > h1 {
 	font-size: var(--main-header-title-size);
 	margin: 0.5em;
 	background: linear-gradient(66deg,
-		rgba(255,255,255,1) 5%,
+		rgba(255,255,255,0) 5%,
 		rgba(24,63,110,1) 5%,
 		rgba(24,63,110,1) 6%,
-		rgba(255,255,255,1) 6%);
+		rgba(255,255,255,0) 6%);
 }
 
 body > main > section > p {
@@ -157,10 +170,10 @@ body > main > section > header > h2 {
 	font-family: 'intro-regular';
 	font-size: var(--main-description-title-size);
 	background: linear-gradient(66deg,
-		rgba(255,255,255,1) 33%,
+		rgba(255,255,255,0) 33%,
 		rgba(24,63,110,1) 33%,
 		rgba(24,63,110,1) 34%,
-		rgba(255,255,255,1) 34%);
+		rgba(255,255,255,0) 34%);
 	margin: 0.5em;
 }
 
@@ -178,12 +191,36 @@ body > main > section:nth-child(3) > figure,
 	align-items: center;
 }
 
+body > main > section:nth-child(3) > figure > img,
+	body > main > section:nth-child(4) > figure > img{
+	
+	clip-path: polygon(0 0, 0 100%,100%  100%,30% 0  );
+    display: inline-block;
+}
+
 body > main > section:nth-child(3) > figure > figcaption,
 	body > main > section:nth-child(4) > figure > figcaption {
 		font-size: var(--main-description-text-size);
 		margin-left: 2em;
 }
 
-
-
 /* Fin de main */
+
+/*Comienzo footer*/
+
+body > footer {
+	display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 20px;
+    padding: 4rem 1rem;
+	text-align: center;
+	background-color: #8a8a8a;
+}
+
+body > footer > section > h3 {
+	font-size:--footer-header-title-size ;
+	padding-bottom: 1rem;
+}
+
+/*Fin footer*/
