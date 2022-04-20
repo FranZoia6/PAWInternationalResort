@@ -25,6 +25,10 @@
 	--main-description-title-size: 3.5rem;
 	--main-description-text-size: 1.5rem;
 	--footer-header-title-size: 1.5rem;
+
+	/*Tamaño imagenes*/
+	--height-img: 30rem;
+
 }
 /* Fin de declaracion de variables */
 
@@ -208,7 +212,7 @@ body > main > section:nth-child(2) > figure {
 
 body > main > section:nth-child(3) > figure > img,
 	body > main > section:nth-child(4) > figure > img{
-	height: 30rem;
+	height: var(--height-img);
 	clip-path: polygon(0 0, 0 100%,100% 100%,40% 0  );
     display: inline-block;
 }
@@ -240,3 +244,34 @@ body > footer > section > h3 {
 }
 
 /*Fin footer*/
+
+
+@media screen and (max-width: 1300px){
+
+	:root {
+		/* Tamaños de letras */
+		--nav-font-size: 18px;
+		--main-header-title-size: 4.5rem;
+		--main-description-title-size: 2.5rem;
+		--main-description-text-size: 1rem;
+		--footer-header-title-size: 1rem;
+
+		/*Tamaño imagenes*/
+		--height-img: 20rem;
+	}
+}
+
+@media screen and (max-width: 900px){
+
+	:root {
+		/* Tamaños de letras */
+		--nav-font-size: 18px;
+		--main-header-title-size: 4rem;
+		--main-description-title-size: 2.5rem;
+		--main-description-text-size: 1rem;
+		--footer-header-title-size: 0.7rem;
+
+		/*Tamaño imagenes*/
+		--height-img: 10rem;
+	}
+}
