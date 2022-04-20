@@ -104,6 +104,7 @@ nav a:hover {
 body > section {
 	padding: 1em var(--external-padding-size) 1em var(--external-padding-size);
 	border-bottom: 1px solid var(--pantone-dark-blue);
+	background-color: #8a8a8a;
 }
 
 body > section > form {
@@ -131,8 +132,8 @@ body > section > form > label > input[name="comenzarReserva"] {
 /* Fin furmularuo de reserva index */
 
 /* Comienzo de main */
-
-/*body > main {
+/*
+body > main {
 	padding: 1em var(--external-padding-size) 1em var(--external-padding-size);
 }*/
 
@@ -145,7 +146,7 @@ body > main > section {
 	padding: 6rem 0;
 }
 
-body > main > section:nth-child(odd){
+body > main > section:nth-child(even){
 	background-color: #8a8a8a;
 }
 
@@ -153,6 +154,8 @@ body > main > section > header > h1 {
 	font-family: 'intro-regular';
 	font-size: var(--main-header-title-size);
 	margin: 0.5em;
+	color: var(--pantone-dark-blue);
+	text-shadow: 1px 1px 2px black;
 	background: linear-gradient(66deg,
 		rgba(255,255,255,0) 5%,
 		rgba(24,63,110,1) 5%,
@@ -163,12 +166,16 @@ body > main > section > header > h1 {
 body > main > section > p {
 	font-family: 'intro-light';
 	font-size: var(--main-description-text-size);
-	margin: 0.5em;
+	padding: 1rem  5rem;
 }
 
 body > main > section > header > h2 {
 	font-family: 'intro-regular';
 	font-size: var(--main-description-title-size);
+	text-align: right;
+	padding-right: 8rem;
+	color: var(--pantone-dark-blue);
+	text-shadow: 1px 1px 2px black;
 	background: linear-gradient(66deg,
 		rgba(255,255,255,0) 33%,
 		rgba(24,63,110,1) 33%,
@@ -185,23 +192,29 @@ body > main > section > figure > figcaption {
 
 body > main > section:nth-child(3) > figure,
 	body > main > section:nth-child(4) > figure {
-	margin: 1em 0em 1em 0em;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
+	padding-left: 8rem;
+}
+
+body > main > section:nth-child(2) > figure {
+	text-align: center;
 }
 
 body > main > section:nth-child(3) > figure > img,
 	body > main > section:nth-child(4) > figure > img{
 	
-	clip-path: polygon(0 0, 0 100%,100%  100%,30% 0  );
+	clip-path: polygon(0 0, 0 100%,100% 100%,30% 0  );
     display: inline-block;
+
 }
 
 body > main > section:nth-child(3) > figure > figcaption,
 	body > main > section:nth-child(4) > figure > figcaption {
 		font-size: var(--main-description-text-size);
-		margin-left: 2em;
+		padding-right: 8rem;
+		text-align: right;
 }
 
 /* Fin de main */
@@ -215,7 +228,7 @@ body > footer {
     grid-gap: 20px;
     padding: 4rem 1rem;
 	text-align: center;
-	background-color: #8a8a8a;
+	background-color: #fff;
 }
 
 body > footer > section > h3 {
