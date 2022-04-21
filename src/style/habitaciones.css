@@ -1,0 +1,58 @@
+@import url(./style.css);
+
+
+/*Comienzo de main*/ 
+
+body > main > header > h1 {
+    text-align: center;
+	font-family: 'intro-regular';
+	font-size: var(--main-header-title-size);
+	margin: 0.5em;
+	color: var(--pantone-dark-blue);
+	text-shadow: 1px 1px 2px black;
+	background: linear-gradient(66deg,
+		rgba(255,255,255,0) 5%,
+		rgba(24,63,110,1) 5%,
+		rgba(24,63,110,1) 6%,
+		rgba(255,255,255,0) 6%);
+}
+
+body > main > section > figure {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	padding-left: 8rem;
+}
+
+body > main > figure {
+	text-align: center;
+	}
+
+body > main > section > figure > img{
+	height: var(--height-img);
+	clip-path: polygon(0 0, 0 100%,100% 100%,70% 0  );
+    display: inline-block;
+}
+
+body > main > section > figure > figcaption {
+		font-size: var(--main-description-text-size);
+		padding-right: 8rem;
+		text-align: right;
+}
+
+body > main > section > button {
+    position: absolute;
+    right: 8rem;
+    top: 22rem;
+    background-color: #008CBA;
+	color:white;
+	border-radius: 8px;
+	transition-duration: 0.4s;
+}
+
+body > main > section > button:hover{
+	background-color: white;
+	color:#008CBA;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+/*Fin de main*/
