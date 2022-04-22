@@ -17,6 +17,7 @@
 	--pantone-dark-blue: #003b70;
 	--pantone-gray: #8a8a8d;
 	--pantone-purple: #4f2c7f;
+	--text-shadow: #000;	
 
 	/* Paddings y margenes */
 	--external-padding-size: 2em;
@@ -27,6 +28,7 @@
 	--main-description-title-size: 3.5rem;
 	--main-description-text-size: 1.5rem;
 	--footer-header-title-size: 1.5rem;
+	--footer-description-text : 1rem;
 
 	/*Tamaño imagenes*/
 	--height-img: 30rem;
@@ -102,7 +104,7 @@ header {
 }
 
 main section:nth-child(even){
-	background-color: #8a8a8a;
+	background-color: var(--pantone-gray);
 }
 
 h1 {
@@ -125,11 +127,11 @@ h2 {
 	text-align: right;
 	padding-right: 8rem;
 	color: var(--pantone-dark-blue);
-	text-shadow: 1px 1px 2px black;
+	text-shadow: 1px 1px 2px var(--text-shadow);
 	/*margin: 0.5em;*/
 	position: absolute;
 	right: 0;
-	top :80px;
+	top :3rem;
 
 }
 
@@ -187,6 +189,10 @@ footer {
 	padding-bottom: 1rem;
 }
 
+footer  p{
+	font-size: var(--footer-description-text);
+}
+
 /*Fin footer*/
 
 @media screen and (max-width: 1300px){
@@ -196,11 +202,15 @@ footer {
 		--nav-font-size: 18px;
 		--main-header-title-size: 4.5rem;
 		--main-description-title-size: 2.5rem;
-		--main-description-text-size: 1rem;
+		--main-description-text-size: 1.5rem;
 		--footer-header-title-size: 1rem;
 
 		/*Tamaño imagenes*/
 		--height-img: 20rem;
+	}
+	h2{
+
+		top:0.7rem
 	}
 }
 
@@ -211,11 +221,45 @@ footer {
 		--nav-font-size: 18px;
 		--main-header-title-size: 4rem;
 		--main-description-title-size: 2.5rem;
-		--main-description-text-size: 1rem;
+		--main-description-text-size: 1.5rem;
 		--footer-header-title-size: 0.7rem;
 
 		/*Tamaño imagenes*/
-		--height-img: 10rem;
+		--height-img: 20rem;
 	}
+	figure{
+		display: block;
+		text-align: center;
+	}
+
+	figcaption {
+		font-family: 'intro-light';
+		font-size: var(--main-description-text-size);
+		z-index: 1;
+		margin: auto;
+		padding: 1rem 0;
+		width: 40rem;
+		text-align: center;
+	}
+
+	footer section:nth-child(1){
+		display: none;
+
+	}
+footer{
+	grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+	h2{
+		position:relative;
+		text-align: center;
+		padding: 1rem;
+	}
+
+	section > figure > img{
+		clip-path: none;
+	}
+
 }
 
