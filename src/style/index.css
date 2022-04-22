@@ -16,14 +16,6 @@ input {
 }
 
 /* Comienzo formulario de reserva index*/
-
-body > section {
-	padding: 1em var(--external-padding-size) 1em var(--external-padding-size);
-	border-bottom: 1px solid var(--pantone-dark-blue);
-	background-color: #8a8a8a;
-	
-}
-
 body > section > form {
 	display: flex;
 	justify-content: space-evenly;
@@ -65,30 +57,12 @@ body > section > form >  label > input[name="comenzarReserva"] {
 /* Fin furmularuo de reserva index */
 
 /* Comienzo de main */
-body > main > section:nth-child(3) > figure,
-	body > main > section:nth-child(4) > figure {
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	padding-left: 8rem;
-}
 
-body > main > section:nth-child(2) > figure {
+body > main > section:nth-child(2) > figure > img {
 	text-align: center;
+	clip-path:none;
+	height: 10rem;
+	display: block	;
 	}
-
-body > main > section:nth-child(3) > figure > img,
-	body > main > section:nth-child(4) > figure > img{
-	height: var(--height-img);
-	clip-path: polygon(0 0, 0 100%,100% 100%,70% 0  );
-    display: inline-block;
-}
-
-body > main > section:nth-child(3) > figure > figcaption,
-	body > main > section:nth-child(4) > figure > figcaption {
-		font-size: var(--main-description-text-size);
-		padding-right: 8rem;
-		text-align: right;
-}
 
 /* Fin de main */
