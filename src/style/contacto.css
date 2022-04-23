@@ -1,0 +1,39 @@
+@import url(style.css);
+
+h2{
+    position:relative;
+    text-align: center;
+}
+
+input{
+    display: block;
+    width: 30rem;
+    padding: 0.5rem 2rem ;
+    margin: 1rem 2rem;
+}
+
+input[name = mensaje]{
+    padding-bottom: 15rem;
+}
+
+section{
+    display: flex;
+}
+
+.contact-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    
+}
+
+address, img{
+    display: inline;
+}
+
+article{
+    margin: 1rem 0rem;
+    text-align: center;
+}
