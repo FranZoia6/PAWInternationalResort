@@ -1,11 +1,11 @@
 @import url(style.css);
 
-h2{
-    position:relative;
+h2 {
+    position: relative;
     text-align: center;
 }
 
-input{
+input {
     display: block;
     width: 30rem;
     padding: 0.5rem 2rem ;
@@ -16,7 +16,7 @@ input[name = mensaje]{
     padding-bottom: 15rem;
 }
 
-section{
+main > section{
     display: flex;
 }
 
@@ -29,11 +29,41 @@ section{
     
 }
 
-address, img{
+article address, article img {
     display: inline;
 }
 
-article{
+article img {
+	width: 2rem;
+	height: 2rem;
+}
+
+address {
+	font-size: 1.5rem;
+	margin-left: 1.5rem;
+}
+
+article {
     margin: 1rem 0rem;
     text-align: center;
+}
+
+input[name="inputRemove"], input[name="inputSubmit"] {
+	width: auto;
+	display: inline-block;
+	align-content: center;
+}
+
+.formulario-reserva > form {
+	text-align:center
+}
+
+@media screen and (max-width: 900px) {
+	main > section {
+		display: block;
+	}
+
+	.formulario-reserva fieldset{
+		display: inline-block;
+	}
 }
