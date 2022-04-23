@@ -45,6 +45,16 @@ body > header {
 	background-color: var(--secondary-color1);
 }
 
+.bar::before {
+	content: "";
+	width: 1rem;
+	height: 100%;
+	transform: skewX(30deg);
+	background-color: var(--principal-color1);
+	position: absolute;
+	left: -3rem;
+}
+
 /* Fin de configuraciones generales */
 
 /* Comienzo del Header */
@@ -64,7 +74,7 @@ header > figure > img {
 nav {
 	border-bottom: 1px solid var(--principal-color2);
 	position: sticky; 
-    top: 0;
+	top: 0;
 	background-color: white;
 	z-index: 1;
 }
@@ -146,7 +156,8 @@ figcaption {
 figure {
 	display: flex;
 	justify-content: space-evenly;
-	align-items: center;}
+	align-items: center;
+}
 
 section > figure > img{
 	height: var(--height-img);
@@ -195,7 +206,7 @@ footer  p{
 
 /*Fin footer*/
 
-@media screen and (max-width: 1300px){
+@media screen and (max-width: 1300px) {
 
 	:root {
 		/* Tamaños de letras */
@@ -208,14 +219,13 @@ footer  p{
 		/*Tamaño imagenes*/
 		--height-img: 20rem;
 	}
-	h2{
 
-		top:0.7rem
+	h2{
+		top: 0.7rem
 	}
 }
 
-@media screen and (max-width: 900px){
-
+@media screen and (max-width: 900px) {
 	:root {
 		/* Tamaños de letras */
 		--nav-font-size: 18px;
@@ -227,7 +237,8 @@ footer  p{
 		/*Tamaño imagenes*/
 		--height-img: 20rem;
 	}
-	figure{
+
+	figure {
 		display: block;
 		text-align: center;
 	}
@@ -244,20 +255,20 @@ footer  p{
 
 	footer section:nth-child(1){
 		display: none;
-
 	}
-footer{
-	grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-}
 
-	h2{
+	footer {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(1, 1fr);
+	}
+
+	h2 {
 		position:relative;
 		text-align: center;
 		padding: 1rem;
 	}
 
-	section > figure > img{
+	section > figure > img {
 		clip-path: none;
 	}
 
