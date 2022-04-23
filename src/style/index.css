@@ -12,20 +12,25 @@ input {
 }
 
 /* Comienzo formulario de reserva index*/
-body > section > form {
+.reservation-nav {
+	background-color: var(--principal-color2);
+}
+
+.reservation-nav > form {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
+	padding: 1rem;
 }
 
-body > section > form > fieldset {
+.reservation-nav fieldset {
 	display: flex;
 	justify-content:center;
 	align-items: center;
 	width:100%;
 }
 
-body > section > form > fieldset > input {
+.reservation-nav input {
 	width: 20%;
 	background-color:aliceblue ;
 	font-size: var(--nav-font-size);
@@ -33,20 +38,19 @@ body > section > form > fieldset > input {
 	color: var(--principal-color2);
 }
 
-.b-submit{
+.b-submit {
 	background-color: var(--principal-color1);
 	color:white;
 	border-radius: 8px;
 	transition-duration: 0.4s;
 }
-.b-submit:hover{
+.b-submit:hover {
 	background-color: white;
 	color: var(--principal-color1);
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-body > section > form >  label > input[name="comenzarReserva"] {
-	
+input[name="comenzarReserva"] {
 	background-color: var(--principal-color1);
 }
 
@@ -58,7 +62,32 @@ body > main > section:nth-child(2) > figure > img {
 	text-align: center;
 	clip-path:none;
 	height: 10rem;
-	display: block	;
-	}
+	display: block;
+}
 
 /* Fin de main */
+
+@media screen and (max-width: 900px) {
+	input[name="cantAdultos"], input[name="cantNinos"] {
+		display: none;
+	}
+
+	.reservation-nav {
+		background-color: var(--principal-color2);
+	}
+
+	.reservation-nav fieldset {
+		display: block;
+		text-align: center;
+	}
+
+	input {
+		display: inline-block;
+		margin: 1rem auto;
+	}
+
+	input[name="comenzarReserva"] {
+		display: block;
+	}
+
+}
