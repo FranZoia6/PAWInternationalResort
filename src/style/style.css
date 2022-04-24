@@ -216,14 +216,19 @@ footer a {
 	padding: 1rem;
 }
 
-/* footer li {
+footer {
+
+}
+
+/*
+ footer li {
 	max-height: 4rem;
 	margin: 1rem auto;
 	padding: auto;
 }
 
-footer li p, footer li a {
-	padding: auto;
+footer li  {
+	padding: 0.3rem;
 } */
 
 footer li p:nth-child(1) {
@@ -232,6 +237,10 @@ footer li p:nth-child(1) {
 
 footer li p:nth-child(2) {
 	display: block;
+}
+
+address p {
+	padding: 0.2rem;
 }
 
 /*Fin footer*/
