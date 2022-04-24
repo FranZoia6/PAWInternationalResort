@@ -34,6 +34,29 @@ fieldset img {
 	padding: 1rem 4rem 1rem 4rem;
 }
 
+.reservation-information section {
+	display: inline-block;
+	position: relative;
+}
+
+.reservation-information section input,
+.reservation-information section select {
+	width: 15rem;
+	text-align: center;
+}
+
+.reservation-information section input::-webkit-input-placeholder,
+.reservation-information section input::-moz-placeholder {
+	text-align: center;
+}
+
+
+.reservation-information section img {
+	position: absolute;
+	top: 0.5rem;
+	left: 0.5rem;
+}
+
 .personal-information {
 	display: block;
 }
@@ -58,8 +81,8 @@ fieldset img {
 
 input[name="inputDelete"], input[name="inputSubmit"] {
 	display: inline;
-	width: 6rem;
-	margin: auto 6rem auto 6rem
+	width: 15%;
+	margin: 1rem 6rem 2rem 6rem
 }
 
 form {
