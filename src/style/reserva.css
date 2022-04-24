@@ -1,0 +1,70 @@
+@import url(style.css);
+
+main > header > h1 {
+	margin: auto;
+}
+
+h2 {
+	position: relative;
+	top: 0;
+	left: 0;
+	text-align: left;
+	padding: 0;
+	margin: 0.5rem auto 0.5rem auto;
+	font-size: 1.5rem;
+}
+
+form fieldset:nth-child(even) {
+	background-color: white;
+}
+
+main input, main select {
+	height: 2.5rem;
+}
+
+fieldset img {
+	height: 1.8rem;
+}
+
+
+
+.reservation-information, .personal-information, .extra-information {
+	position: relative;
+	display: block;
+	padding: 1rem 4rem 1rem 4rem;
+}
+
+.personal-information {
+	display: block;
+}
+
+.personal-information input {
+	display: block;
+	width: 100%;
+	margin: 1rem 0rem 1rem 0rem;
+}
+
+.extra-information {
+	
+}
+
+.extra-information input {
+	width: 100%;
+}
+
+.room-selector {
+	display: none;
+}
+
+input[name="inputDelete"], input[name="inputSubmit"] {
+	display: inline;
+}
+
+form {
+	text-align: center;
+	margin: auto auto;
+}
+
+@media screen and (max-width: 900px) {
+
+} 

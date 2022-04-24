@@ -32,7 +32,10 @@
 
 		<section>
 			<form action="">
-				<fieldset>
+				<fieldset class="reservation-information">
+					<header>
+						<h2>Datos de reserva</h2>
+					</header>
 					<section>
 						<img src="./imagenes/icons/calendar-check.svg">
 						<input type="date" name="diaEntrada" placeholder="Dia de entrada">
@@ -48,7 +51,7 @@
 						<input type="number" name="cantAdultos" placeholder="Cantidad de adultos">
 					</section>
 					
-					<sectio >
+					<section>
 						<img src="./imagenes/icons/baby-solid.svg" height="20">
 						<input type="number" name="cantNinos" placeholder="Cantidad de niños">
 					</section>
@@ -70,7 +73,7 @@
 
 				</fieldset>
 
-				<fieldset>
+				<fieldset class="personal-information">
 					<header>
 						<h2>Datos personales</h2>
 					</header>
@@ -79,7 +82,7 @@
 					<input type="text" name="numero" placeholder="Número de teléfono">
 				</fieldset>
 
-				<fieldset>
+				<fieldset class="extra-information">
 					<header>
 						<h2>Observaciones</h2>
 					</header>
@@ -87,7 +90,7 @@
 				</fieldset>
 
 				<label for="inputReset">
-					<input type="reset" name="inputSubmit" value="Borrar">
+					<input type="reset" name="inputDelete" value="Borrar">
 				</label>
 				<label for="inputSubmit">
 					<input type="submit" name="inputSubmit" value="Reservar">
@@ -131,7 +134,7 @@
 
 	<!-- Este es el Menú para seleccionar la habitación -->
 	<!-- Solo se mostraria cuando el user Clickee para seleccionar la habitacion -->
-	<section>
+	<section class="room-selector">
 		<header>Selecciona la habitación</header>
 		<article>
 			<header>Tipo habitación 1</header>

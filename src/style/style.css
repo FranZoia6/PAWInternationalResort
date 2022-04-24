@@ -139,11 +139,9 @@ h2 {
 	padding-right: 8rem;
 	color: var(--principal-color2);
 	text-shadow: 1px 1px 2px var(--text-shadow);
-	/*margin: 0.5em;*/
 	position: absolute;
 	right: 0;
 	top :3rem;
-
 }
 
 figcaption {
