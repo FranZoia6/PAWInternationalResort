@@ -58,11 +58,12 @@ fieldset img {
 
 input[name="inputDelete"], input[name="inputSubmit"] {
 	display: inline;
+	width: 6rem;
+	margin: auto 6rem auto 6rem
 }
 
 form {
 	text-align: center;
-	margin: auto auto;
 }
 
 @media screen and (max-width: 900px) {
