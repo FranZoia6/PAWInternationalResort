@@ -80,6 +80,14 @@ nav {
 	z-index: 2;
 }
 
+nav input {
+	display: none;
+}
+
+nav label{
+	display: none;
+}
+
 nav > ul {
 	display: flex;
 	justify-content: center;
@@ -167,11 +175,10 @@ section > figure > img{
 button {
     position: absolute;
     right: 8rem;
-    top: 22rem;
+    top: 20rem;
     background-color: var(--principal-color1);
 	color:white;
 	border-radius: 8px;
-	transition-duration: 0.4s;
 }
 
 button:hover{
@@ -246,6 +253,8 @@ footer li p:nth-child(2) {
 	h2{
 		top: 0.7rem
 	}
+	button {
+		top: 18rem;}
 }
 
 @media screen and (max-width: 900px) {
@@ -259,6 +268,10 @@ footer li p:nth-child(2) {
 
 		/*Tamaño imagenes*/
 		--height-img: 20rem;
+	}
+	
+	section{
+		text-align: center;
 	}
 
 	figure {
@@ -287,6 +300,7 @@ footer li p:nth-child(2) {
 
 	footer li, footer a, footer p {
 		font-size: 1.5rem;
+		padding: 0.3rem;
 	}
 	
 	footer a, footer p {
@@ -303,5 +317,41 @@ footer li p:nth-child(2) {
 		clip-path: none;
 	}
 
-}
+	button{
+		position: relative;
+		padding: 1rem 2rem;
+		right: 0;
+		top:0;
+	}
 
+	nav{
+		text-align: center;
+	}
+
+	nav input{
+		display: none;	
+	}
+
+	input:checked  ~ ul{
+		display:block;
+	}
+
+	nav label {
+		color: var(--principal-color2);
+		margin: 0.2rem;
+		box-sizing: border-box;
+		display: inline-block;
+		border: 2px solid var(--text-shadow);
+		border-radius: 0.5rem;
+		width: 2.5rem;
+		line-height: 30px;
+		font-size: 2rem;
+		text-align: center;
+		user-select: none
+	}
+
+	nav ul {
+		display: none;
+	}
+
+}
