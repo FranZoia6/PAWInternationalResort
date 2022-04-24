@@ -58,12 +58,36 @@ input[name="inputRemove"], input[name="inputSubmit"] {
 	text-align:center
 }
 
+.formulario-reserva fieldset {
+	display: block;
+}
+
 @media screen and (max-width: 900px) {
 	main > section {
 		display: block;
 	}
 
 	.formulario-reserva fieldset{
-		display: inline-block;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 80%;
+	}
+
+	.formulario-reserva input {
+		height: 2rem;
+		font-size: 2rem;
+	}
+
+	input[name="inputRemove"], input[name="inputSubmit"] {
+		height: auto;
+	}
+
+	.contact-information {
+		margin: 2rem auto 2rem auto;
+	}
+
+	.contact-information address {
+		font-size: 2rem;
 	}
 }

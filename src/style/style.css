@@ -188,21 +188,45 @@ button:hover{
 
 footer {
 	display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    grid-gap: 20px;
-    padding: 4rem 1rem;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(1, 1fr);
+	grid-gap: 20px;
+	padding: 4rem 1rem;
 	text-align: center;
 	background-color: white;
 }
 
- h3 {
+h3 {
 	font-size: var(--footer-header-title-size );
 	padding-bottom: 1rem;
 }
 
-footer  p{
+footer p {
 	font-size: var(--footer-description-text);
+	padding: 1rem;
+}
+
+footer a {
+	font-size: var(--footer-description-text);
+	padding: 1rem;
+}
+
+/* footer li {
+	max-height: 4rem;
+	margin: 1rem auto;
+	padding: auto;
+}
+
+footer li p, footer li a {
+	padding: auto;
+} */
+
+footer li p:nth-child(1) {
+	font-weight: bold;
+}
+
+footer li p:nth-child(2) {
+	display: block;
 }
 
 /*Fin footer*/
@@ -233,7 +257,7 @@ footer  p{
 		--main-header-title-size: 4rem;
 		--section-title-size: 2.5rem;
 		--section-description-size: 1.5rem;
-		--footer-header-title-size: 0.7rem;
+		--footer-header-title-size: 2rem;
 
 		/*Tamaño imagenes*/
 		--height-img: 20rem;
@@ -254,7 +278,7 @@ footer  p{
 		text-align: center;
 	}
 
-	footer section:nth-child(1){
+	footer section:nth-child(1) {
 		display: none;
 	}
 
@@ -263,8 +287,16 @@ footer  p{
 		grid-template-rows: repeat(1, 1fr);
 	}
 
+	footer li, footer a, footer p {
+		font-size: 1.5rem;
+	}
+	
+	footer a, footer p {
+		display: inline-block;
+	}
+
 	h2 {
-		position:relative;
+		position: relative;
 		text-align: center;
 		padding: 1rem;
 	}
