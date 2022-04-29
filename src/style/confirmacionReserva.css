@@ -1,0 +1,20 @@
+@import url(./style.css);
+
+section{
+    display: flex;
+}
+
+article{
+    display: block;
+}
+
+form{
+    display: block;
+}
+
+h2{
+    display: block;
+    position: relative;
+    top: 0;
+    right: 0;
+}

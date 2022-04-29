@@ -12,10 +12,15 @@
 
 /* Comienzo de declaracion de variables */
 :root {
+
+	/*font*/
+	--corporative-font:"intro-regular";
+	--secondary-font: "roboto";
+
 	/* Colores */
 	--principal-color1: #00B5D9;
 	--principal-color2: #003b70;
-	--secondary-color1: #8a8a8d;
+	--secondary-color1: #8a8a8d3a;
 	--secondary-color2: #4f2c7f;
 	--text-shadow: #000;
 
@@ -43,6 +48,7 @@ body {
 
 body > header {
 	background-color: var(--secondary-color1);
+
 }
 
 .bar::before {
@@ -96,7 +102,7 @@ nav > ul {
 
 nav > ul > li> a {
 	display: block;
-	font-family: 'intro-light';
+	font-family: var(--secondary-font);
 	font-size: var(--nav-font-size);
 	font-weight: 600;
 	text-decoration: none;
@@ -127,7 +133,7 @@ main section:nth-child(even){
 }
 
 h1 {
-	font-family: 'intro-regular';
+	font-family: var(--corporative-font);
 	font-size: var(--main-header-title-size);
 	margin: 0.5em;
 	color: var(--principal-color2);
@@ -135,13 +141,13 @@ h1 {
 }
 
 p {
-	font-family: 'intro-light';
+	font-family: var(--secondary-font);
 	font-size: var(--section-description-size);
 	padding: 1rem  5rem;
 }
 
 h2 {
-	font-family: 'intro-regular';
+	font-family: var(--corporative-font);
 	font-size: var(--section-title-size);
 	text-align: right;
 	padding-right: 8rem;
@@ -153,7 +159,7 @@ h2 {
 }
 
 figcaption {
-	font-family: 'intro-light';
+	font-family: var(--secondary-font);
 	font-size: var(--section-description-size);
 	padding-right: 8rem;
 	text-align: right;
@@ -216,10 +222,6 @@ footer a {
 	padding: 1rem;
 }
 
-footer {
-
-}
-
 /*
  footer li {
 	max-height: 4rem;
@@ -269,10 +271,10 @@ address p {
 @media screen and (max-width: 900px) {
 	:root {
 		/* Tamaños de letras */
-		--nav-font-size: 18px;
+		--nav-font-size: 2rem;
 		--main-header-title-size: 4rem;
-		--section-title-size: 2.5rem;
-		--section-description-size: 1.5rem;
+		--section-title-size: 3rem;
+		--section-description-size: 2rem;
 		--footer-header-title-size: 2rem;
 
 		/*Tamaño imagenes*/
@@ -289,7 +291,7 @@ address p {
 	}
 
 	figcaption {
-		font-family: 'intro-light';
+		font-family:var(--secondary-font);
 		font-size: var(--section-description-size);
 		z-index: 1;
 		margin: auto;
@@ -335,6 +337,7 @@ address p {
 
 	nav{
 		text-align: center;
+		padding: 1rem;
 	}
 
 	nav input{
@@ -352,15 +355,19 @@ address p {
 		display: inline-block;
 		border: 2px solid var(--text-shadow);
 		border-radius: 0.5rem;
-		width: 2.5rem;
-		line-height: 30px;
-		font-size: 2rem;
+		width: 5rem;
+		line-height: 5rem;
+		font-size: 5rem;
 		text-align: center;
 		user-select: none
 	}
 
 	nav ul {
 		display: none;
+	}
+	
+	nav li{
+		margin: 1rem;
 	}
 
 }

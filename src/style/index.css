@@ -13,7 +13,7 @@ input {
 
 /* Comienzo formulario de reserva index*/
 .reservation-nav {
-	background-color: var(--principal-color2);
+	background-color: var(--secondary-color1);
 }
 
 .reservation-nav > form {
@@ -31,17 +31,17 @@ input {
 }
 
 .reservation-nav input {
+	padding: 1rem;
 	width: 20%;
 	background-color:aliceblue ;
 	font-size: var(--nav-font-size);
 	font-weight: 800;
-	color: var(--principal-color2);
+	color: var(--principal-color1);
 }
 
 .b-submit {
 	background-color: var(--principal-color1);
 	color:white;
-	border-radius: 8px;
 	transition-duration: 0.4s;
 }
 .b-submit:hover {
@@ -51,7 +51,7 @@ input {
 }
 
 input[name="comenzarReserva"] {
-	background-color: var(--principal-color1);
+	background-color: var(--principal-color2);
 }
 
 /* Fin furmularuo de reserva index */
@@ -72,9 +72,6 @@ body > main > section:nth-child(2) > figure > img {
 		display: none;
 	}
 
-	.reservation-nav {
-		background-color: var(--principal-color2);
-	}
 
 	.reservation-nav fieldset {
 		display: block;
@@ -88,6 +85,8 @@ body > main > section:nth-child(2) > figure > img {
 
 	input[name="comenzarReserva"] {
 		display: block;
+		text-align: center;
+		width: 20rem;
 	}
 
 }
