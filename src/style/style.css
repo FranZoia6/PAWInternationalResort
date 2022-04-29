@@ -21,7 +21,8 @@
 	--principal-color1: #00B5D9;
 	--principal-color2: #003b70;
 	--secondary-color1: #8a8a8d3a;
-	--secondary-color2: #4f2c7f;
+	--secondary-color2: #8a8a8d;
+	--secondary-color3: #4f2c7f;
 	--text-shadow: #000;
 
 	/* Paddings y margenes */
@@ -38,6 +39,7 @@
 
 	/*Tamaño imagenes*/
 	--height-img: 30rem;
+	--height-img-transition:32rem;
 
 }
 
@@ -163,6 +165,7 @@ figcaption {
 	font-size: var(--section-description-size);
 	padding-right: 8rem;
 	text-align: right;
+
 	/*margin: 0.5em;*/
 }
 
@@ -176,7 +179,15 @@ section > figure > img{
 	height: var(--height-img);
 	clip-path: polygon(0 0, 0 100%,100% 100%,70% 0  );
     display: inline-block;
+	transition: 0.2s;
 }
+
+section > figure > img:hover{
+	transition: 0.2s;
+	height: var(--height-img-transition);
+	z-index: 1;
+}
+
 
 button {
     position: absolute;
@@ -259,6 +270,7 @@ address p {
 
 		/*Tamaño imagenes*/
 		--height-img: 20rem;
+		--height-img-transition:21rem;
 	}
 
 	h2{
@@ -272,8 +284,8 @@ address p {
 	:root {
 		/* Tamaños de letras */
 		--nav-font-size: 2rem;
-		--main-header-title-size: 4rem;
-		--section-title-size: 3rem;
+		--main-header-title-size: 5rem;
+		--section-title-size: 4rem;
 		--section-description-size: 2rem;
 		--footer-header-title-size: 2rem;
 
@@ -322,10 +334,15 @@ address p {
 		position: relative;
 		text-align: center;
 		padding: 1rem;
+		margin-bottom: 2rem;
 	}
 
 	section > figure > img {
 		clip-path: none;
+	}
+
+	section > figure > img:hover{
+		height: var(--height-img);
 	}
 
 	button{

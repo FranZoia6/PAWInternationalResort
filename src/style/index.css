@@ -33,12 +33,15 @@ input {
 .reservation-nav input {
 	padding: 1rem;
 	width: 20%;
-	background-color:aliceblue ;
+	background-color: var(--secondary-color2) ;
 	font-size: var(--nav-font-size);
 	font-weight: 800;
-	color: var(--principal-color1);
+	color: white;
 }
 
+.reservation-nav input::placeholder {
+	color: white;
+}
 .b-submit {
 	background-color: var(--principal-color1);
 	color:white;
