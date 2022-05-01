@@ -24,6 +24,7 @@
 	--secondary-color2: #8a8a8d;
 	--secondary-color3: #4f2c7f;
 	--text-shadow: #000;
+	--fondo: #fff; 
 
 	/* Paddings y margenes */
 	--external-padding-size: 2em;
@@ -43,10 +44,13 @@
 
 }
 
+
+
 /* Comienzo de configuraciones generales */
 body {
 	min-width: 48em;
 }
+
 
 body > header {
 	background-color: var(--secondary-color1);
@@ -68,12 +72,18 @@ body > header {
 
 /* Comienzo del Header */
 
+header >figure {
+	height: 20rem;
+	overflow: hidden;
+}
 header > figure > img {
-	height: 10em;
+	width: 100%;
 	display: block;
+
+	/*
 	margin-left: auto;
 	margin-right: auto;
-	object-fit: scale-down;
+	object-fit: scale-down;*/
 }
 
 /*Fin del Header*/
@@ -84,7 +94,7 @@ nav {
 	border-bottom: 1px solid var(--principal-color2);
 	position: sticky; 
 	top: 0;
-	background-color: white;
+	background-color:var(--fondo);
 	z-index: 2;
 }
 
@@ -110,6 +120,11 @@ nav > ul > li> a {
 	text-decoration: none;
 	color: var(--principal-color2);
 	padding: 10px;
+}
+
+#inputSubmit, #inputRemove {
+	background-color:var(--principal-color2);
+	color:var(--fondo);
 }
 
 nav a:hover {
@@ -159,6 +174,7 @@ h2 {
 	right: 0;
 	top :3rem;
 }
+  
 
 figcaption {
 	font-family: var(--secondary-font);
@@ -175,7 +191,7 @@ figure {
 	align-items: center;
 }
 
-section > figure > img{
+section > figure >  img{
 	height: var(--height-img);
 	clip-path: polygon(0 0, 0 100%,100% 100%,70% 0  );
     display: inline-block;
@@ -185,7 +201,6 @@ section > figure > img{
 section > figure > img:hover{
 	transition: 0.2s;
 	height: var(--height-img-transition);
-	z-index: 1;
 }
 
 
@@ -215,7 +230,7 @@ footer {
 	grid-gap: 20px;
 	padding: 4rem 1rem;
 	text-align: center;
-	background-color: white;
+	background-color:var(--fondo);
 }
 
 h3 {
@@ -386,5 +401,24 @@ address p {
 	nav li{
 		margin: 1rem;
 	}
+
+}
+
+@media (prefers-color-scheme: dark) {
+
+    body {
+		--principal-color1: #003b70;
+		--principal-color2: #00B5D9;
+		--secondary-color1: #8a8a8d3a;
+		--secondary-color2: #8a8a8d;
+		--secondary-color3: #4f2c7f;
+		--text-shadow: #fff;
+		--fondo: #000;
+	
+	
+		background-color: #000;
+		color: #fff;
+    }
+
 
 }

@@ -42,11 +42,13 @@ input {
 .reservation-nav input::placeholder {
 	color: white;
 }
+
 .b-submit {
 	background-color: var(--principal-color1);
 	color:white;
 	transition-duration: 0.4s;
 }
+
 .b-submit:hover {
 	background-color: white;
 	color: var(--principal-color1);
