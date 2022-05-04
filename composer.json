@@ -1,0 +1,16 @@
+{
+	"name": "first/test",
+	"description": "",
+	"keywords": [],
+	"authors": [],
+	"require": {
+		"php": ">= 7.4.0",
+		"filp/whoops": "~2",
+		"monolog/monolog": "^2.5"
+	},
+	"autoload": {
+		"psr-4": {
+			"Paw\\": "src/"
+		}
+	}
+}
