@@ -68,6 +68,10 @@ body > header {
 	z-index: 1;
 }
 
+a {
+	text-decoration: none;
+}
+
 /* Fin de configuraciones generales */
 
 /* Comienzo del Header */
@@ -172,9 +176,8 @@ h2 {
 	text-shadow: 1px 1px 2px var(--text-shadow);
 	position: absolute;
 	right: 0;
-	top :3rem;
+	top: 3rem;
 }
-  
 
 figcaption {
 	font-family: var(--secondary-font);
@@ -245,19 +248,8 @@ footer p {
 
 footer a {
 	font-size: var(--footer-description-text);
-	padding: 1rem;
+	color: white;
 }
-
-/*
- footer li {
-	max-height: 4rem;
-	margin: 1rem auto;
-	padding: auto;
-}
-
-footer li  {
-	padding: 0.3rem;
-} */
 
 footer li p:nth-child(1) {
 	font-weight: bold;

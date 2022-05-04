@@ -9,23 +9,15 @@
 </head>
 
 <body>
-	<header class="banner">
-		<figure>
-			<img src="./imagenes/banner.jpg" alt="Hotel">
-		</figure>
-	</header>
+	<!-- Header component -->
+	<?php
+		require 'parts/header.view.php';
+	?>
 
-	<nav>
-		<input type="checkbox" id="menu">
-		<label for="menu"> ☰ </label>
-		<ul>
-			<li><a href="./index.html">Home</a></li>
-			<li><a href="./habitaciones.html">Habitaciones</a></li>
-			<li><a href="./reserva.html">Reserva</a></li>
-			<li><a href="./servicios.html">Servicios</a></li>
-			<li><a href="./contacto.html">Contacto</a></li>
-		</ul>
-	</nav>
+	<!-- Nav component -->
+	<?php
+		require 'parts/nav.view.php';
+	?>
 
 	<main>
 		<header>
@@ -85,38 +77,9 @@
 		</section>
 	</main>
 
-	<footer>
-		<section>
-			<h3>PAW Hotel Resort Internacional </h3>
-			<p>
-				El hotel cuenta con 32 habitaciones con vista al campo y al polo del hotel, y con amplios espacios verdes, piscina climatizada, 
-				cancha de polo, juegos y actividades para niños. En el Restaurante La Perdiz ubicado en el primer piso, se puede degustar comida
-				gourmet de campo y asado.
-			</p>
-		</section>
-
-		<section>
-			<h3>Enlaces</h3>
-			<ul>
-				<li><a href="./index.html">Home</a></li>
-				<li><a href="./habitaciones.html">Habitaciones</a></li>
-				<li><a href="./reserva.html">Reserva</a></li>
-				<li><a href="./servicios.html">Servicios</a></li>
-				<li><a href="./contacto.html">Contacto</a></li>
-			</ul>
-		</section>
-
-		<section>
-			<address>
-				<ul>
-					<li><p>Facebook: </p> <a href="https://www.facebook.com/Hotel-Petit-217478074961025">PAW resort International</a></li>
-					<li><p>Instagram: </p> <a href="www.google.com">@PawResortInternational</a></li>
-					<li><p>Teléfono:</p> <p>+5491179842315</p></li>
-					<li><p>Whatsapp:</p> <p>+5491179842315</p></li>
-					<li><p>Dirección:</p> <p>Valentin coria 37</p></li>
-				</ul>
-			</address>
-		</section>
-	</footer>
+	<!-- Footer component -->
+	<?php
+		require 'parts/footer.view.php';
+	?>
 </body>
 </html>
