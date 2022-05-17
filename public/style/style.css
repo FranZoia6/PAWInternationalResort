@@ -15,7 +15,7 @@
 
 	/*font*/
 	--corporative-font:"intro-regular";
-	--secondary-font: "roboto";
+	--secondary-font: arial;
 
 	/* Colores */
 	--principal-color1: #00B5D9;
@@ -248,7 +248,7 @@ footer p {
 
 footer a {
 	font-size: var(--footer-description-text);
-	color: white;
+	color: var(--text-shadow);
 }
 
 footer li p:nth-child(1) {

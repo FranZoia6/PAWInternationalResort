@@ -6,7 +6,8 @@
 	"require": {
 		"php": ">= 7.4.0",
 		"filp/whoops": "~2",
-		"monolog/monolog": "^2.5"
+		"monolog/monolog": "^2.5",
+		"vlucas/phpdotenv": "^5.4"
 	},
 	"autoload": {
 		"psr-4": {

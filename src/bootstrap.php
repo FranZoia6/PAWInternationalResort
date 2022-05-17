@@ -4,12 +4,22 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
+use  Dotenv\Dotenv;
 
 use Paw\Core\Router;
+use Paw\Core\Config;
+
+
+$dotenv = Dotenv::createUnsafeImmutable(__DIR__ . '/../');
+$dotenv-> load();
+
+$config = new Config;
 
 // Manjeador de logs
 $log = new Logger('mvc-app');
-$log->pushHandler(new StreamHandler(__DIR__ . '/../logs/app.log', Logger::DEBUG));
+$handler = new StreamHandler($config->get("LOG_PATH"));
+$handler -> setLevel($config->get('LOG_LEVEL'));
+$log->pushHandler($handler);
 
 // Manejador de errores
 $whoops = new \Whoops\Run;
