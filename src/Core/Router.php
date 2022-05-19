@@ -1,6 +1,8 @@
 <?php
 namespace Paw\Core;
 
+use Paw\Core\Request;
+use Paw\Core\Exceptions;
 use Paw\Core\Exceptions\RouteNotFoundException;
 
 class Router {
@@ -8,6 +10,16 @@ class Router {
 		"GET" => [],
 		"POST" => []
 	];
+
+	public string $notFound = 'not_found';
+	public string $internalError = 'internal_error';
+
+	public function _construct()
+	{
+		$this->get($this->$notFound , 'ErrorController@notFound');
+		$this->get($this->$internalError, 'ErrorController@internalError');
+	}
+	
 
 	public function loadRoutes($path, $action, $method = 'GET') {
 		$this->routes[$method][$path] = $action;
@@ -27,19 +39,32 @@ class Router {
 
 	public function getController($path, $http_method) {
 		// seria equivalente a hacer esto en js --> const [controlador, metodo] = this.routes(path).split('@');
-		return explode('@', $this->routes[$http_method][$path]);
-	}
-
-	public function direct($path, $http_method = 'GET') {
 		if (!$this->exists($path, $http_method)) {
 			throw new RouteNotFoundException("No existe ruta para este path");
 		}
+		return explode('@', $this->routes[$http_method][$path]);
+	}
 
-		
-		list($controlador, $metodo) = $this->getController($path, $http_method);
-
-		$nombreControlador = "Paw\\App\\Controllers\\${controlador}";
+	public function call($controller, $method)
+	{
+		$nombreControlador = "Paw\\App\\Controllers\\{$controller}";
 		$instanciaControlador = new $nombreControlador;
-		$instanciaControlador->$metodo();
+		$instanciaControlador->$method();
+	}
+
+	public function direct(Request $request) {
+		try{
+			list ($path, $http_method) = $request -> route();
+			list($controller, $method) = $this->getController($path, $http_method);
+			$this->call($controller, $method);
+		}catch(RouteNotFoundException $e){
+			list($controller, $method) = $this->getController($this->notFound, "GET");
+			$this->call($controller, $method);
+
+		}catch (Exeption $e){
+
+			list($controller, $method) = $this->getController($this->internalError, "GET");
+			$this->call($controller, $method);
+		}
 	}
 }

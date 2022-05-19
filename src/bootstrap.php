@@ -6,6 +6,7 @@ use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 use  Dotenv\Dotenv;
 
+use Paw\Core\Request;
 use Paw\Core\Router;
 use Paw\Core\Config;
 
@@ -26,6 +27,8 @@ $whoops = new \Whoops\Run;
 $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 $whoops->register();
 
+$request = new Request;
+
 // Declarando el Router
 $router = new Router;
 $router->get('/', 'PageController@index');
@@ -34,5 +37,3 @@ $router->get('/contact', 'PageController@contact');
 $router->get('/rooms', 'PageController@rooms');
 $router->get('/reservation', 'PageController@reservation');
 $router->post('/processReservation', 'PageController@processReservation');
-$router->get('not_found', 'ErrorController@notFound');
-$router->get('internal_error', 'ErrorController@internalError');
