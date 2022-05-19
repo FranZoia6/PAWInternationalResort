@@ -25,6 +25,7 @@ class Config
         return preg_replace('#/+#','/', join('/', $paths));
     }
 
+
     public function get ($name)
     {
         return $this -> configs[$name] ?? null; 

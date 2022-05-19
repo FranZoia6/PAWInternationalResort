@@ -31,6 +31,7 @@ $request = new Request;
 
 // Declarando el Router
 $router = new Router;
+$router->setLogger($log);
 $router->get('/', 'PageController@index');
 $router->get('/services', 'PageController@services');
 $router->get('/contact', 'PageController@contact');
