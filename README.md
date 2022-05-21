@@ -12,4 +12,5 @@ Maquetado del proyecto se sitio web para el hotel  PWA International Resort
 * cd PAWInternationalResort 
 * composer install
 cd .env.example .env # Editar el .env los valores deseados
+* Ejecutar migrations: phinx migrate -e development
 * Ejecutar php -S localhost:8888 -t public
