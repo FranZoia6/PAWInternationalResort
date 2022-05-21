@@ -18,10 +18,10 @@ class Router {
 	public string $notFound = 'not_found';
 	public string $internalError = 'internal_error';
 
-	public function _construct()
+	public function __construct()
 	{
-		$this->get($this->$notFound , 'ErrorController@notFound');
-		$this->get($this->$internalError, 'ErrorController@internalError');
+		$this->get($this->notFound , 'ErrorController@notFound');
+		$this->get($this->internalError, 'ErrorController@internalError');
 	}
 	
 
@@ -83,8 +83,6 @@ class Router {
 
 		} catch (Exception $e){
 			list($controller, $method) = $this->getController($this->internalError, "GET");
-			print_r($controller);
-			die();
 			$this-> logger
 			->error(
 				"Status Code: 500 - Internal Server Error",
