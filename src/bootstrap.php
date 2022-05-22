@@ -43,3 +43,7 @@ $router->get('/contact', 'PageController@contact');
 $router->get('/rooms', 'PageController@rooms');
 $router->get('/reservation', 'PageController@reservation');
 $router->post('/processReservation', 'PageController@processReservation');
+$router->get('/rooms', 'RoomsController@index');
+$router->get('/room', 'RoomsController@get');
+$router->get('/room/edit', 'RoomsController@edit');
+$router->post('/room/edit', 'RoomsController@set');

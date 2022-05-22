@@ -34,7 +34,7 @@ final class PrimerasTablasMigration extends AbstractMigration
             ->addColumn('dni', 'integer')
             ->crEate();
         
-        $tableClient = $this->table('hr');
+        $tableClient = $this->table('ReservedRoom'); //cambiar el nombre
         $tableClient->addColumn('room','integer')
             ->addColumn('reservation', 'integer')
             ->addColumn('subtotal', 'float')

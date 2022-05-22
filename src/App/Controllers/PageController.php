@@ -2,35 +2,10 @@
 
 namespace Paw\App\Controllers;
 
-class PageController {
-	public string $viewsDir;
+use Paw\Core\Controller;
 
-	public function __construct() {
-		$this->viewsDir = __DIR__ . "/../views/";
-
-		$this->menu = [
-			[
-				"href" => "/",
-				"name" => "Home"
-			],
-			[
-				"href" => "/rooms",
-				"name" => "Habitaciones"
-			],
-			[
-				"href" => "/reservation",
-				"name" => "Reserva"
-			],
-			[
-				"href" => "/services",
-				"name" => "Servicios"
-			],
-			[
-				"href" => "/contact",
-				"name" => "Contacto"
-			]
-		];
-	}
+class PageController extends Controller 
+{
 
 	public function index() {
 		$titulo = 'index';
