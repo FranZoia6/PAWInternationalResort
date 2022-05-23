@@ -3,20 +3,23 @@
 namespace Paw\Core\Database;
 
 use PDO;
-use Paw\Core\Traits\Loggable;
+use Monolog\Logger;
 
 class QueryBuilder
 {
-    use Loggable;
-
-    public function __construct(PDO $pdo)
+	public function __construct(PDO $pdo, Logger $logger = null)
     {
         $this->pdo=$pdo;
+        $this->logger=$logger;
     }
 
-    public function select()
+    public function select($table)
     {
-
+        $query = "select * from {$table}";
+        $sentencia = $this->pdo->prepare($query);
+        $sentencia->setFetcMode(PDO::FETCH_ASSOC);
+        $sentencia->execute();
+        return $sentencia->fetchAll();
     }
 
     public function insert()

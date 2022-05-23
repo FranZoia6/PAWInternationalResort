@@ -14,7 +14,7 @@ class Room extends Model
         "description" => null,
         "name" => null,
         "price"=> null,
-        "visible"=> null,
+        "visible"=> null
 
     ];
 
@@ -46,7 +46,7 @@ class Room extends Model
 
     public function set(array $values)
     {
-        foreach(array_keys($this->fields)as $field){
+        foreach(array_keys($this->fields) as $field){
             continue;
         }
         $method = "set" . ucfirst($field);
