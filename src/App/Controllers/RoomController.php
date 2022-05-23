@@ -3,7 +3,7 @@
 namespace Paw\App\Controllers;
 
 use Paw\Core\Controller;
-use Paw\App\Models\Room;
+use Paw\App\Models\RoomsCollection;
 
 class RoomController extends Controller
 {

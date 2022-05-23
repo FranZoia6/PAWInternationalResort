@@ -14,7 +14,7 @@ class Controller
 	{
 		global $connection,$log; //Variables globales creadas en bootstrao.php
 
-		$this->viewsDir = __DIR__ . "/../App/views/";
+		$this->viewsDir = __DIR__ . "/../App/Views/";
 
 		$this->menu = [
 			[

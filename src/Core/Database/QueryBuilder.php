@@ -1,4 +1,4 @@
-<? 
+<?php
 
 namespace Paw\Core\Database;
 
@@ -17,7 +17,7 @@ class QueryBuilder
     {
         $query = "select * from {$table}";
         $sentencia = $this->pdo->prepare($query);
-        $sentencia->setFetcMode(PDO::FETCH_ASSOC);
+        $sentencia->setFetchMode(PDO::FETCH_ASSOC);
         $sentencia->execute();
         return $sentencia->fetchAll();
     }

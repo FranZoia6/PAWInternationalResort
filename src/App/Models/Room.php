@@ -14,7 +14,7 @@ class Room extends Model
         "description" => null,
         "name" => null,
         "price"=> null,
-        "visible"=> null
+        "visible"=> null,
 
     ];
 
@@ -23,7 +23,7 @@ class Room extends Model
         if(strlen($description) > 300){
             throw new InvalidValueFormatException("La descripcion no debe superar los 300 caracteres");
         }
-        $this ->fields["description"] = $description;
+        $this->fields["description"] = $description;
     }
 
     public function setName(string $name)
@@ -31,25 +31,27 @@ class Room extends Model
         if(strlen($name) > 30){
             throw new InvalidValueFormatException("El nombre  no debe superar los 30 caracteres");
         }
-        $this ->fields["name"] = $name;
+        $this->fields["name"] = $name;
     }
 
     public function setPrice(string $price)
     {
-        $this ->fields["price"] = $price;
+        $this->fields["price"] = $price;
     }
 
     public function setVisible(string $visible)
     {
-        $this ->fields["visible"] = $visible;
+        $this->fields["visible"] = $visible;
     }
 
     public function set(array $values)
     {
         foreach(array_keys($this->fields) as $field){
-            continue;
+            if(!isset($values[$field])){
+                continue;
+            }
+            $method = "set" . ucfirst($field);
+                $this-> $method($values[$field]);
         }
-        $method = "set" . ucfirst($field);
-        $this-> $method($values[$field]);
     }
 }

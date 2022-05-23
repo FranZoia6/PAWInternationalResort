@@ -24,17 +24,19 @@
 		</header>
 
 		<?php foreach ($rooms as $room) : ?>
-		<section>
-			<header>
-				<h2><?= $room-> fields["name"] ?></h2> 
-			</header>
-			<figure>
-				<img src="./imagenes/Habitacion.jpg" height="200" alt="Habitacion 1">
-				<figcaption>
-                <?= $room-> fields["description"] ?>
-				</figcaption>
-			</figure>
-		</section>
+			<?php if ($room->fields["visible"]==1){?>	
+				<section>
+					<header>
+						<h2><?= $room->fields["name"] ?></h2> 
+					</header>
+					<figure>
+						<img src="./imagenes/Habitacion.jpg" height="200" alt="Habitacion 1">
+						<figcaption>
+						<?= $room->fields["description"] ?>
+						</figcaption>
+					</figure>
+				</section>
+			<?php }?>
         <?php endforeach ?>
 
 
